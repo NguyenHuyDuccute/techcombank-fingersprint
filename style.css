@@ -1,0 +1,179 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+  background-color: #000000;
+  /* overflow: hidden; */
+
+  /* background-image: url(z6226985512814_5c4f4fec806a59d78a03d0e23683100f.jpg);
+  background-size: contain;
+  background-repeat: no-repeat; */
+  /* background-color: #000; */
+
+    /* Ngăn chọn và kéo nội dung */
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none;    /* Firefox all */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;         /* Standard */
+    /* -webkit-user-drag: none;   Ngăn kéo ảnh trên Safari */
+}
+
+img {
+  -webkit-touch-callout: none;
+}
+
+#btn {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  /* width: 100%;
+  height: 100%; */
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 50px;
+
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  /* background-color: antiquewhite; */
+}
+.finger-class {
+  width: 100%;
+  /* height: 850px; */
+  position: absolute;
+  /* background-image: url(z6226985512814_5c4f4fec806a59d78a03d0e23683100f.jpg); */
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin-top: 50px; */
+}
+
+.fingerprint-wrapper {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none; /* Chrome / Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+  user-select: none;         /* Standard */
+  -webkit-user-drag: none;   /* Safari */
+}
+
+#fingerprint {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* opacity: 0; */
+  margin-top: -20px;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-user-select: none; /* Chrome / Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+  user-select: none;         /* Standard */
+  -webkit-user-drag: none;   /* Safari */
+
+
+      -webkit-tap-highlight-color: transparent; /* Chrome / Android */
+      outline: none; /* Ngăn viền mặc định */
+}
+
+.finger-active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-user-select: none; /* Chrome / Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+  user-select: none;         /* Standard */
+  -webkit-user-drag: none;   /* Safari */
+}
+
+#fingerprint:active {
+  transform: scale(0.9);
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border: 5px solid rgba(0, 122, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  animation: none;
+  margin-top: -10px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease, transform 1s ease;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+/* Keyframes for ring animation */
+@keyframes ringEffect {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media screen {
+}
