@@ -30,7 +30,7 @@ fingerprint.addEventListener("touchstart", (event) => {
 
     // Thêm trạng thái vào lịch sử mà không thay đổi URL
     history.pushState({ page: 1 }, "", window.location.href);
-  }, 14000); // Thời gian đồng bộ với CSS keyframes
+  }, 13500); // Thời gian đồng bộ với CSS keyframes
   // setTimeout(() =>{
   //   fingerBg.style.display = "block";
   //   fingerprint.style.display = "block";

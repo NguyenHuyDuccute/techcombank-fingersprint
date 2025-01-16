@@ -128,3 +128,23 @@ img {
 
 @media screen {
 }
+
+.finger-class,
+.finger-active {
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.finger-active.active {
+  opacity: 1;
+  visibility: visible;
+}
+.finger-class.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.finger-class.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
